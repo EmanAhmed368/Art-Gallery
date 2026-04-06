@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maison d'Alba</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/signup.css">
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,201;1,201&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="main-nav">
+      
+    <p  id="logo" onclick="Home()">Maison <i>d'Alba</i></p>
+    
+<ul id="center" class="nav">
+  
+    <li><a href="../maison d'alba/main.html">HOME</a></li>
+    <li><a href="#">GALLERY</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">CONTACT</a></li>
+</ul>
+<div id="nav-indicator"></div>
+<ul id="right" class="nav">
+<ul class="nav-icons">
+<li class="nav-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+</svg></a></li>
+<li class="nav-icon divider"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+</svg></a></li>
+
+<li class="nav-icon"><a href="dashboard.html" title="Admin Dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+</svg></a></li>
+</ul>
+<li class="nav-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+  </svg></a></li>
+
+  <li><a href="#">LOGIN</a></li>
+<li><a href="./signup.html" target="_self"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+  </svg>SIGN UP</a></li>
+</ul>
+  <svg id="list" xmlns="http://www.w3.org/2000/svg" width="32" height="26" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+  </svg>
+
+</nav>
+<!--downlist -->
+<nav id="sec-nav">
+<ul id="ul1">
+<li><a href="../maison d'alba/main.html">HOME</a></li>
+<li><a href="#">GALLERY</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">CONTACT</a></li>
+</ul>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+<ul id="ul2">
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+</svg>
+CART
+</a>
+</li>
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+</svg>
+WISHLIST
+</a>
+</li>
+
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+</svg>
+ADMIN
+</a>
+</li>
+
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+</svg>
+LOGIN
+</a>
+</li>
+<li class="icon-adjust">
+<a href="./signup.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+</svg>
+SIGN UP
+</a>
+</li>
+</ul>
+</nav>
+<div id="wrapper">
+
+      <div id="img">
+        <div id="mask">
+      <div id="img-p">
+      "Art washes away from the soul<br>
+      the dust of everyday life."</div>
+    <p id="pablo">— Pablo Picasso</p>
+  </div>
+</div>
+    <div id="form-side">
+        <div class="wrapper2">
+            <div class="para">
+        <p id="logo2" class="same-width">Maison <i>d'Alba</i></p>  
+        <p id="heading" class="same-width">Join the House of Alba</p>
+        <p id="heading2" class="same-width">Create your account and begin your journey as a collector.</p>
+    </div>
+    <div class="center">
+        <form novalidate>
+          <div class="form-control">
+            <label for="text">FULL NAME</label>
+            <input  id="name" type="text" name="text" placeholder="Your full name" title="Fill this out">
+            <small></small></div>
+
+            <div class="form-control">
+            <label  for="email">EMAIL ADDRESS</label>
+            <input  id="email" type="email" name="email" placeholder="you@example.com" title="Fill this out">
+            <small></small></div>
+          
+            <div class="form-control">
+            <label for="password">PASSWORD</label>
+            <div class="password-wrapper">
+                <input type="password" id="pass" placeholder="Your password" title="Fill this out">
+                <span id="togglePassword" >
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                  </svg>
+                </span>
+              </div>
+              <small></small></div><br>
+            <button type="submit">CREATE ACCOUNT</button>
+
+        </form>
+        
+        <p id="after-form" >Already a member?<a href="#"><b>Log In</b></a></p>
+    </div>
+    </div>
+   </div>
+</div>
+
+<footer>
+  <div id="container">
+    
+    <div class="col">
+      <h2 onclick="Home()">Maison <i>d'Alba</i></h2>
+      <p>Curating exceptional art for discerning collectors since 2018. Every piece in our collection is selected for its enduring beauty and cultural significance.</p>
+    </div>
+
+    <div class="col">
+      <h4>Explore</h4>
+      <div id="col2">
+        <a href="#">Gallery</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+        <a href="#">My Account</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>Contact Us</h4>
+      <address>
+        12 Rue du Faubourg Saint-Honoré<br>
+        75008 Paris, France
+      </address>
+      <a href="mailto:hello@maisondalba.com">hello@maisondalba.com</a>
+      <a href="tel:+33142681234">+33 1 42 68 12 34</a>
+    </div>
+
+    <div class="col">
+      <h4>Exclusive Drops</h4>
+      <p>Be the first to know about new acquisitions and private viewings.</p>
+      <div id="email-box">
+        <input type="email" placeholder="Your email">
+        <button type="submit" aria-label="Subscribe"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+          <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+        </svg></button>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div id="copy-rights">
+    <p>© 2026 Maison d'Alba. All rights reserved.</p>
+    <span>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of service</a>
+  </span>
+  </div>
+</footer>
+<script src="./JS/main.JS"></script> <!--for the nav -->
+<script src="./JS/form.JS"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/main.css">
+   
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playfair+Display:ital,wght@1,400..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,201;1,201&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--main nav-->
+  <nav id="main-nav">
+      
+    <p  id="logo" onclick="Home()">Maison <i>d'Alba</i></p>
+    
+<ul id="center" class="nav">
+  
+    <li><a href="../maison d'alba/main.html">HOME</a></li>
+    <li><a href="#">GALLERY</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">CONTACT</a></li>
+</ul>
+<div id="nav-indicator"></div>
+<ul id="right" class="nav">
+<ul class="nav-icons">
+<li class="nav-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+</svg></a></li>
+<li class="nav-icon divider"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+</svg></a></li>
+
+<li class="nav-icon"><a href="dashboard.html" title="Admin Dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+</svg></a></li>
+</ul>
+<li class="nav-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+  </svg></a></li>
+
+  <li><a href="#">LOGIN</a></li>
+<li><a href="./signup.html" target="_self"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+  </svg>SIGN UP</a></li>
+</ul>
+  <svg id="list" xmlns="http://www.w3.org/2000/svg" width="32" height="26" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+  </svg>
+
+</nav>
+<!--downlist -->
+<nav id="sec-nav">
+<ul id="ul1">
+<li><a href="../maison d'alba/main.html">HOME</a></li>
+<li><a href="#">GALLERY</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">CONTACT</a></li>
+</ul>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+<ul id="ul2">
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+</svg>
+CART
+</a>
+</li>
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+</svg>
+WISHLIST
+</a>
+</li>
+
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+</svg>
+ADMIN
+</a>
+</li>
+
+<li class="icon-adjust">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+</svg>
+LOGIN
+</a>
+</li>
+<li class="icon-adjust">
+<a href="./signup.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+</svg>
+SIGN UP
+</a>
+</li>
+</ul>
+</nav>
+
+
+
+<div class="dashboard-container" >
+    <header class="dash-header">
+      <p class="subtitle">ADMINISTRATION</p>
+      <h1>Dashboard</h1>
+      <p class="date-overview">Weekly overview — March 2026</p>
+      
+      <nav class="dash-tabs">
+        <button class="tab-btn active" data-tab="overview">OVERVIEW</button>
+        <button class="tab-btn" data-tab="artworks">ARTWORKS (12)</button>
+      </nav>
+      
+    </header>
+     <section id="overview-section" class="tab-content active">
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="card-top">
+          <div class="icon-box"><i class="bi bi-people"></i></div>
+          <span class="trend up">↑ 12</span>
+        </div>
+        <div class="card-body">
+          <h2>284</h2>
+          <p>TOTAL USERS</p>
+        </div>
+      </div>
+  
+      <div class="stat-card">
+        <div class="card-top">
+          <div class="icon-box"><i class="bi bi-bag"></i></div>
+          <span class="trend up">↑ 3</span>
+        </div>
+        <div class="card-body">
+          <h2>15</h2>
+          <p>TOTAL ORDERS</p>
+        </div>
+      </div>
+  
+      <div class="stat-card">
+        <div class="card-top">
+          <div class="icon-box"><i class="bi bi-clock"></i></div>
+          <span class="trend down">↓ 1</span>
+        </div>
+        <div class="card-body">
+          <h2>4</h2>
+          <p>PENDING ORDERS</p>
+        </div>
+      </div>
+  
+      <div class="stat-card">
+        <div class="card-top">
+          <div class="icon-box"><i class="bi bi-check2-circle"></i></div>
+          <span class="trend up">↑ 4</span>
+        </div>
+        <div class="card-body">
+          <h2>9</h2>
+          <p>SOLD ORDERS</p>
+        </div>
+      </div>
+  
+      <div class="stat-card">
+        <div class="card-top">
+          <div class="icon-box"><i class="bi bi-hash"> </i></div>
+          <span class="trend up">↑ 2</span>
+        </div>
+        <div class="card-body">
+          <h2>48</h2>
+          <p>TOTAL ARTWORKS</p>
+        </div>
+      </div>
+  
+      <div class="stat-card">
+        <div class="card-top">
+          <div class="icon-box"><i class="bi bi-graph-up"></i></div>
+          <span class="trend up">↑ 18400</span>
+        </div>
+        <div class="card-body">
+          <h2>$152,300</h2>
+          <p>WEEKLY REVENUE</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="analytics-section">
+        <div class="analytics-header">
+          <div>
+            <p class="subtitle">ANALYTICS</p>
+            <h3>Weekly Performance</h3>
+          </div>
+          <div class="toggle-group">
+            <button class="toggle-btn active">REVENUE</button>
+            <button class="toggle-btn">ORDERS</button>
+          </div>
+        </div>
+        
+        <div class="chart-container" style="position: relative; height:300px; width:100%">
+           <canvas id="performanceChart"></canvas>
+        </div>
+      </section>
+  
+
+  <section class="orders-section">
+    <div class="orders-header">
+      <div>
+        <p class="subtitle">ORDERS</p>
+        <h3>Recent Transactions</h3>
+      </div>
+      <span class="order-count">8 orders this week</span>
+    </div>
+  
+    <div class="table-container">
+      <table class="transactions-table">
+        <thead>
+          <tr>
+            <th>ORDER ID</th>
+            <th>CUSTOMER</th>
+            <th>ARTWORK</th>
+            <th>STATUS</th>
+            <th>AMOUNT</th>
+            <th>DATE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MA-7F3A2</td>
+            <td>Catherine Beaumont</td>
+            <td class="artwork-cell">
+              <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=50&q=80" alt="thumb">
+              The Golden Hour
+            </td>
+            <td><span class="status delivered">DELIVERED</span></td>
+            <td>$12,500</td>
+            <td>Feb 24, 2026</td>
+          </tr>
+          <tr>
+            <td>MA-8B1C9</td>
+            <td>Richard Thornton III</td>
+            <td class="artwork-cell">
+              <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=50&q=80" alt="thumb">
+              Portrait of Silence
+            </td>
+            <td><span class="status shipped">SHIPPED</span></td>
+            <td>$18,000</td>
+            <td>Feb 25, 2026</td>
+          </tr>
+          <tr>
+            <td>MA-2D4E7</td>
+            <td>Amara Okafor</td>
+            <td class="artwork-cell">
+              <img src="assets/images/portraits/img3.jpeg" alt="thumb">
+              Solitary Figure
+            </td>
+            <td><span class="status pending">PENDING</span></td>
+            <td>$22,000</td>
+            <td>Feb 26, 2026</td>
+          </tr>
+          <tr>
+            <td>MA-5F9A1</td>
+            <td>Henrik Lindström</td>
+            <td class="artwork-cell">
+              <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=50&q=80" alt="thumb">
+              Venetian Morning
+            </td>
+            <td><span class="status delivered">DELIVERED</span></td>
+            <td>$16,800</td>
+            <td>Feb 26, 2026</td>
+          </tr>
+          <tr>
+            <td>MA-1A8B4</td>
+            <td>James Harrington</td>
+            <td class="artwork-cell">
+              <img src="./assets/images/portraits/img8.png" alt="thumb">
+              Provençal Fields
+            </td>
+            <td><span class="status cancelled">CANCELLED</span></td>
+            <td>$8,900</td>
+            <td>Feb 27, 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>
+<section id="artworks-section" class="artworks-section tab-content">
+
+    <div class="artworks-header">
+      <p class="art-count">12 artworks in collection</p>
+      <button class="add-artwork">
+        <i class="bi bi-plus"></i> ADD ARTWORK
+      </button>
+    </div>
+    
+    <div class="art-table-container">
+    <table class="art-table">
+    
+    <thead>
+    <tr>
+    <th>ARTWORK</th>
+    <th>ARTIST</th>
+    <th>CATEGORY</th>
+    <th>PRICE</th>
+    <th>YEAR</th>
+    <th>ACTIONS</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+    <tr>
+    <td class="artwork-cell">
+    <img src="./assets/images/portraits/img6.jpg" alt="">
+    The Golden Hour
+    </td>
+    <td>Elena Vasquez</td>
+    <td><span class="category">LANDSCAPE</span></td>
+    <td>$12,500</td>
+    <td>2021</td>
+    <td class="actions">
+    <i class="bi bi-pencil"></i>
+    <i class="bi bi-trash"></i>
+    </td>
+    </tr>
+    
+    <tr>
+    <td class="artwork-cell">
+    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=50">
+    Portrait of Silence
+    </td>
+    <td>James Whitfield</td>
+    <td><span class="category">PORTRAIT</span></td>
+    <td>$18,000</td>
+    <td>2022</td>
+    <td class="actions">
+    <i class="bi bi-pencil"></i>
+    <i class="bi bi-trash"></i>
+    </td>
+    </tr>
+    
+    <tr>
+    <td class="artwork-cell">
+    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=50">
+    Urban Reverie
+    </td>
+    <td>Sofia Chen</td>
+    <td><span class="category">CITYSCAPE</span></td>
+    <td>$9,800</td>
+    <td>2023</td>
+    <td class="actions">
+    <i class="bi bi-pencil"></i>
+    <i class="bi bi-trash"></i>
+    </td>
+    </tr>
+    
+    <tr>
+    <td class="artwork-cell">
+    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=50">
+    The Reading Room
+    </td>
+    <td>Marcus Bellini</td>
+    <td><span class="category">INTERIOR</span></td>
+    <td>$14,200</td>
+    <td>2020</td>
+    <td class="actions">
+    <i class="bi bi-pencil"></i>
+    <i class="bi bi-trash"></i>
+    </td>
+    </tr>
+    
+    <tr>
+    <td class="artwork-cell">
+    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=50">
+    Abstract Meditation No.7
+    </td>
+    <td>Yuki Tanaka</td>
+    <td><span class="category">OTHER</span></td>
+    <td>$7,500</td>
+    <td>2023</td>
+    <td class="actions">
+    <i class="bi bi-pencil"></i>
+    <i class="bi bi-trash"></i>
+    </td>
+    </tr>
+    
+    </tbody>
+    </table>
+    </div>
+    
+    </section>
+</div>
+  <!--footer-->
+<footer>
+    <div id="container">
+      
+      <div class="col">
+        <h2 onclick="Home()">Maison <i>d'Alba</i></h2>
+        <p>Curating exceptional art for discerning collectors since 2018. Every piece in our collection is selected for its enduring beauty and cultural significance.</p>
+      </div>
+  
+      <div class="col">
+        <h4>Explore</h4>
+        <div id="col2">
+          <a href="#">Gallery</a>
+          <a href="#">About us</a>
+          <a href="#">Contact</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+  
+      <div class="col">
+        <h4>Contact Us</h4>
+        <address>
+          12 Rue du Faubourg Saint-Honoré<br>
+          75008 Paris, France
+        </address>
+        <a href="mailto:hello@maisondalba.com">hello@maisondalba.com</a>
+        <a href="tel:+33142681234">+33 1 42 68 12 34</a>
+      </div>
+  
+      <div class="col">
+        <h4>Exclusive Drops</h4>
+        <p>Be the first to know about new acquisitions and private viewings.</p>
+        <div id="email-box">
+          <input type="email" placeholder="Your email">
+          <button type="submit" aria-label="Subscribe"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+          </svg></button>
+        </div>
+      </div>
+  
+    </div>
+  
+    <hr>
+  
+    <div id="copy-rights">
+      <p>© 2026 Maison d'Alba. All rights reserved.</p>
+      <span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of service</a>
+    </span>
+    </div>
+  </footer>
+<script src="./JS/main.JS"></script>
+<script src="./JS/dashboard.js"></script>
+</body>
+</html>
